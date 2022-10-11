@@ -1,4 +1,4 @@
-FROM openjdk:17-alpine
+FROM openjdk:19-jdk-alpine3.16
 
 ENV REVIEWDOG_VERSION=v0.14.0
 
