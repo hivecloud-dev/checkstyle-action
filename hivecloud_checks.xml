@@ -109,6 +109,9 @@
       <property name="query" value="//RCURLY[parent::SLIST[count(./*)=1]
                                      or preceding-sibling::*[last()][self::LCURLY]]"/>
     </module>
+	<module name="VariableDeclarationUsageDistance">
+		<property name="allowedDistance" value="50"/>
+	</module>
     <module name="WhitespaceAfter">
       <property name="tokens"
                value="COMMA, SEMI, TYPECAST, LITERAL_IF, LITERAL_ELSE, LITERAL_RETURN,
@@ -258,22 +261,23 @@
     <module name="Indentation">
       <property name="basicOffset" value="4"/>
       <property name="braceAdjustment" value="8"/>
-      <property name="caseIndent" value="8"/>
+      <property name="caseIndent" value="0"/>
       <property name="throwsIndent" value="10"/>
       <property name="lineWrappingIndentation" value="4"/>
-      <property name="arrayInitIndent" value="14"/>
+      <property name="arrayInitIndent" value="0"/>
     </module>
     <module name="AbbreviationAsWordInName">
       <property name="ignoreFinal" value="false"/>
       <property name="allowedAbbreviationLength" value="0"/>
+      <property name="allowedAbbreviations" value="AR,DTO,CTE,TMS,MDFE,LIVE,XML,CSV,JNDI,URL,CNPJ,CPF,CEP,UF,IE,ID,ARTMS,CORS,GLOBUS,DB,OS,ERP"/>
+	  
       <property name="tokens"
                value="CLASS_DEF, INTERFACE_DEF, ENUM_DEF, ANNOTATION_DEF, ANNOTATION_FIELD_DEF,
                     PARAMETER_DEF, VARIABLE_DEF, METHOD_DEF, PATTERN_VARIABLE_DEF, RECORD_DEF,
                     RECORD_COMPONENT_DEF"/>
     </module>
     <module name="NoWhitespaceBeforeCaseDefaultColon"/>
-    <module name="OverloadMethodsDeclarationOrder"/>
-    <module name="VariableDeclarationUsageDistance"/>
+    <!-- <module name="OverloadMethodsDeclarationOrder"/> -->
 
     <module name="MethodParamPad">
       <property name="tokens"
